@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Formulario Registro</title>
+    <!-- Enlace a los estilos CSS -->
+  <link rel="stylesheet" href="./css/practica30.css">
+  <link rel="stylesheet" href="./css/estilos_index.css">
+</head>
+
+<body>
+  <!-- Sección de cabecera con título y navegación -->
+  
+  <header class="header">
+    <h1 class="header__title">Tour Across Japan's Lands</h1>
+    <div class="espacio">
+        <nav class="header__nav">
+                      <!-- Logo de la empresa -->
+            <img align="left" src="./css/img/logoTipo/logo_japonsHouse-SinFondo.png" alt="Logo" class="footer__logo">
+                        <!-- Lista de navegación -->
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="index.html">Inicio</a></li>
+                <li class="header__nav-item"><a href="index.html#historia">Historia</a></li>
+                <li class="header__nav-item"><a href="gastronomia.html"> Gastronomia</a></li>
+                <li class="header__nav-item"><a href="JaponServicios.html">Lugares turístico</a></li>
+                <li class="header__nav-item"><a href="JaponLeyendas.html"> Folklore japones </a></li>
+                <li class="header__nav-item"><a href="practica30.html">Registro</a></li>
+                <li class="header__nav-item"><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+    <h2>Formulario de Registro</h2>
+</header>
+  <!-- #region de Formulario -->
+  
+  <form id="formulario" action="conect.php" method="POST" class="formato">
+        <!-- Tabla para organizar los campos del formulario -->
+    <table border="0">
+      <h3>Ingrese sus datos</h3>
+      <tr>
+        <!--seccion de nombres y apellidos-->
+        <td>Nombre:</td>
+        <td>Apellidos:</td>
+      </tr>
+      <tr>
+        <td><input type="text" name="nombre" required oninput="convertToUppercase(this)" onfocus="resaltarCampo(event)" onblur="eliminarResaltado(event)"></td>
+        <td><input type="text" name="apellidos" required oninput="convertToUppercase(this)" onfocus="resaltarCampo(event)" onblur="eliminarResaltado(event)"></td>
+      </tr>
+      <!--Seccion de edad y genero de la persona-->
+      <tr>
+        <td>Edad:</td>
+        <td>Sexo:</td>
+      </tr>
+      <tr>
+        <td><input type="number" name="edad" min="18" max="60" required onfocus="resaltarCampo(event)" onblur="eliminarResaltado(event)"></td>
+        <!--select con opciones de hombre o mujer -->
+        <td><select name="sexo" required onfocus="resaltarCampo(event)" onblur="eliminarResaltado(event)">
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+          </select></td>
+      </tr>
+      <!--seccion de ciudad y correo -->
+      <tr>
+        <td>Ciudad:</td>
+        <td>Correo:</td>
+      </tr>
+      <tr>
+        <!-- select con las opciones de ciudades-->
+        <td><select name="ciudad" id="ciudad" required onfocus="resaltarCampo(event)" onblur="eliminarResaltado(event)">
+            <option value="Ensenada">Ensenada</option>
+            <option value="Tijuana">Tijuana</option>
+            <option value="Mexicali">Mexicali</option>
+            <option value="Rosarito">Rosarito</option>
+            <option value="Tecate">Tecate</option>
+          </select></td>
+        <td><input type="text" name="correo" required oninput="convertToUppercase(this)" onfocus="resaltarCampo(event)" onblur="eliminarResaltado(event)"></td>
+      </tr>
+      <tr>
+        <!-- seccion para comentarios y no. de telefono -->
+        <td>Comentarios:</td>
+        <td>Teléfono:(10 dígitos)</td>
+      </tr>
+      <tr>
+        <td rowspan="1"><textarea name="comentarios" id="comentarios" cols="20" rows="4" oninput="convertToUppercase(this)" onfocus="resaltarCampo(event)" onblur="eliminarResaltado(event)"></textarea></td>
+        <td><input type="text" name="telefono" title="Introduzca un número de teléfono válido de 10 dígitos" oninput="convertToUppercase(this)" onfocus="resaltarCampo(event)" onblur="eliminarResaltado(event)"></td>
+      </tr>
+      <tr>
+        <!-- seccion para los select de camisa y transporte -->
+        <td>Camisa:</td>
+        <td>Transporte:</td>
+      </tr>
+      <tr>
+        <td><select name="camisa" id="camisa" onchange="aparecer()" onfocus="resaltarCampo(event)" onblur="eliminarResaltado(event)">
+            <option value="null"> ---- </option>
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+          </select></td>
+        <td><select rowspan="1" name="transporte" id="transporte" onfocus="resaltarCampo(event)" onblur="eliminarResaltado(event)">
+            <option value="null"> ---- </option>
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+          </select></td>
+      </tr>
+      <tr class="talla">
+        <!-- seccion de select para las tallas de la camisa -->
+        <td>Talla:</td>
+      </tr>
+      <tr class="talla">
+        <td><select name="talla" onfocus="resaltarCampo(event)" onblur="eliminarResaltado(event)">
+            <option value="null"> ---- </option>
+            <option value="chica">Chica</option>
+            <option value="mediana">Mediana</option>
+            <option value="grande">Grande</option>
+          </select></td>
+      </tr>
+      <tr>
+        <td colspan="2"><input type="submit" name="submit" value="Enviar"></td>
+      </tr>
+    </table>
+  </form>
+    <!-- Inclusión del script JavaScript -->
+  <script src="/js/practica30.js"></script>
+</body>
+
+</html>

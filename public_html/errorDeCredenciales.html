@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso Denegado</title>
+    <!-- Estilos internos para personalizar la apariencia de la página de error -->
+    <style>
+        /* Estilo general para el cuerpo de la página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        /* Contenedor de error con fondo blanco, borde, sombra y redondeado */
+       .error-container {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        /* Estilo para el título de error */
+       .error-container h1 {
+            color: #e74c3c;
+            font-size: 48px;
+            margin: 0 0 20px;
+        }
+        /* Estilo para los párrafos de texto */
+       .error-container p {
+            font-size: 18px;
+            margin: 0 0 20px;
+        }
+        /* Estilo para el enlace de volver */
+       .error-container a {
+            text-decoration: none;
+            color: #3498db;
+            font-size: 16px;
+        }
+        /* Cambio de estilo al pasar el cursor sobre el enlace */
+       .error-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Div que contiene toda la información de error -->
+    <div class="error-container">
+        <!-- Título de error -->
+        <h1>Acceso Denegado</h1>
+        <!-- Mensaje de error inicial -->
+        <p>Lo sentimos, no tienes permiso para acceder a esta página.</p>
+        <!-- Sugerencia para verificar credenciales -->
+        <p>Por favor, verifica tus credenciales y vuelve a intentarlo.</p>
+        <!-- Enlace para volver a la página de inicio de sesión -->
+        <p><a href="index.html">Volver a la página de inicio de sesión</a></p>
+    </div>
+</body>
+</html>
